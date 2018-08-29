@@ -3,7 +3,7 @@ package com.farm.weekend.gram.weekend_farm_admin.connect;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.hanadal.dooson.hanadal.util.UtilClass;
+import com.farm.weekend.gram.weekend_farm_admin.util.UtilClass;
 
 import retrofit2.Call;
 import retrofit2.Callback;
