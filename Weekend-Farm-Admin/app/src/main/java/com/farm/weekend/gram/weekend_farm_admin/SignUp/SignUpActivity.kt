@@ -42,8 +42,9 @@ class SignUpActivity : AppCompatActivity(),SignUpContract.View {
     }
 
     override fun startSignInActivity() {
-        showToast(applicationContext,"로그인 성공")
+        showToast(applicationContext,"회원가입 성공")
         intent = Intent(applicationContext,SignInActivity::class.java)
+        startActivity(intent)
     }
 
 
