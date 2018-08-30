@@ -6,13 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.farm.weekend.gram.weekend_farm_user.R;
+
 public class SearchFragment extends Fragment {
 
-    public static MyFarmFragment create() {
-        MyFarmFragment fragment = new MyFarmFragment();
-/*        Bundle args = new Bundle();
-        args.putInt("page", pageNumber);
-        fragment.setArguments(args);*/
+    public static SearchFragment create() {
+        SearchFragment fragment = new SearchFragment();
         return fragment;
     }
 
@@ -24,8 +23,7 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_page, container, false);
-//        return rootView;
-        return null;
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.search_fragment, container, false);
+        return rootView;
     }
 }

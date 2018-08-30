@@ -1,18 +1,17 @@
 package com.farm.weekend.gram.weekend_farm_user.fragment;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ShopFragment extends Fragment{
+import com.farm.weekend.gram.weekend_farm_user.R;
 
-    public static android.support.v4.app.Fragment create() {
-        MyFarmFragment fragment = new MyFarmFragment();
-/*        Bundle args = new Bundle();
-        args.putInt("page", pageNumber);
-        fragment.setArguments(args);*/
+public class ShopFragment extends Fragment {
+
+    public static Fragment create() {
+        ShopFragment fragment = new ShopFragment();
         return fragment;
     }
 
@@ -24,8 +23,7 @@ public class ShopFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_page, container, false);
-//        return rootView;
-        return null;
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.shop_fragment, container, false);
+        return rootView;
     }
 }

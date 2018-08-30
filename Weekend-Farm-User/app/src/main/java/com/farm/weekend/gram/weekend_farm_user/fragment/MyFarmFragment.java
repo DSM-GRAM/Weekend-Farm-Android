@@ -12,9 +12,6 @@ public class MyFarmFragment extends Fragment {
 
     public static Fragment create() {
         MyFarmFragment fragment = new MyFarmFragment();
-/*        Bundle args = new Bundle();
-        args.putInt("page", pageNumber);
-        fragment.setArguments(args);*/
         return fragment;
     }
 
