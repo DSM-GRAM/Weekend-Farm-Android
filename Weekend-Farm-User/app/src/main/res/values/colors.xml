@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>gitgit p
-=======
     <color name="colorPrimary">#a2d7e3</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#a2d7e3</color>
->>>>>>> da195fafdb6a961b7ea30b2b67ae849abe4f9e21
 </resources>
