@@ -23,6 +23,7 @@ class SignInPresenter : SignInContract.Presenter {
         signInModel.pw = pw
         Connector.api.doSignIn(signInModel).enqueue(object : Callback<JSONObject> {
             override fun onResponse(call: Call<JSONObject>, response: Response<JSONObject>) {
+                Log.d("Debug",response.code().toString())
                 if(response.code() == 201) {
                     val preference: SharedPreferences = signInView.getContext().getSharedPreferences("PREFERENCE",Context.MODE_PRIVATE)
                     val editor: SharedPreferences.Editor = preference.edit()

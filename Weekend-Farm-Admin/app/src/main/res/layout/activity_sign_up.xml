@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp.SignUpActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="회원가입"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.85">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edit_sign_up_id"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:hint="아이디"
+                android:inputType="text"
+                android:textColor="@color/colorGrayLight"
+                android:textColorHint="@color/colorGrayLight"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/edit_sign_up_pw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.75" />
+
+            <EditText
+                android:id="@+id/edit_sign_up_pw"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:textColor="@color/colorGrayLight"
+                android:textColorHint="@color/colorGrayLight"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/edit_sign_up_pw_re"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_sign_up_id"
+                app:layout_constraintWidth_percent="0.75" />
+
+            <EditText
+                android:id="@+id/edit_sign_up_pw_re"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="비밀번호 재확인"
+                android:inputType="textPassword"
+                android:textColor="@color/colorGrayLight"
+                android:textColorHint="@color/colorGrayLight"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/edit_sign_up_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_sign_up_pw"
+                app:layout_constraintWidth_percent="0.75" />
+
+            <EditText
+                android:id="@+id/edit_sign_up_name"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="이름"
+                android:inputType="text"
+                android:textColor="@color/colorGrayLight"
+                android:textColorHint="@color/colorGrayLight"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/edit_sign_up_phone_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_sign_up_pw_re"
+                app:layout_constraintWidth_percent="0.75" />
+
+            <EditText
+                android:id="@+id/edit_sign_up_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="전화번호"
+                android:inputType="phone"
+                android:textColor="@color/colorGrayLight"
+                android:textColorHint="@color/colorGrayLight"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/btn_sign_up"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_sign_up_name"
+                app:layout_constraintWidth_percent="0.75" />
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundstyle_btn"
+                android:text="회원가입"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_sign_up_phone_number"
+                app:layout_constraintWidth_percent="0.75" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
