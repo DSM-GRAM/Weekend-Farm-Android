@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity{
 
         titleText = findViewById(R.id.title_text);
         viewPager = findViewById(R.id.main_view_pager);
+        viewPager.setPagingEnabled(false);
 
         pagerAdapter = new PagerAdapter(getSupportFragmentManager());
 

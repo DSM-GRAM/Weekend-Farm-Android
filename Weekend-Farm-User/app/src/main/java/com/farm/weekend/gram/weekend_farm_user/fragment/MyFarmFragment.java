@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.farm.weekend.gram.weekend_farm_user.R;
+
 public class MyFarmFragment extends Fragment {
 
-    public static android.support.v4.app.Fragment create() {
+    public static Fragment create() {
         MyFarmFragment fragment = new MyFarmFragment();
 /*        Bundle args = new Bundle();
         args.putInt("page", pageNumber);
@@ -24,8 +26,7 @@ public class MyFarmFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_page, container, false);
-//        return rootView;
-        return null;
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.my_farm_fragment, container, false);
+        return rootView;
     }
 }
