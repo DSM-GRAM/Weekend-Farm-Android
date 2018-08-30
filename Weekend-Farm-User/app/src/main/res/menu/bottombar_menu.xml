@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_item_farm"
+        android:icon="@drawable/ic_person_24dp"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:title="내 양식장" />
+
+    <item
+        android:id="@+id/menu_item_shop"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:title="물품 샵" />
+
+    <item
+        android:id="@+id/menu_item_search"
+        android:icon="@drawable/ic_search_24dp"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:title="양식장 검색" />
+</menu>
