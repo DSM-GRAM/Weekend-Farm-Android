@@ -11,18 +11,24 @@ import android.view.ViewGroup;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
 import com.farm.weekend.gram.weekend_farm_user.adapter.MyFarmFishAdapter;
+import com.farm.weekend.gram.weekend_farm_user.adapter.MyFarmItemAdapter;
 import com.farm.weekend.gram.weekend_farm_user.model.MyFarmFishModel;
+import com.farm.weekend.gram.weekend_farm_user.model.MyFarmItemModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyFarmFragment extends Fragment {
 
-    MyFarmFishAdapter mAdapter;
-    RecyclerView mRecyclerView;
+    MyFarmFishAdapter fishAdapter;
+    MyFarmItemAdapter ItemAdapter;
+
+    RecyclerView fishRecyclerView;
+    RecyclerView ItemRecyclerView;
     LinearLayoutManager linearLayoutManager;
 
-    List<MyFarmFishModel> FishModel;
+    ArrayList<MyFarmItemModel> ItemModel;
+    ArrayList<MyFarmFishModel> FishModel;
 
 
     public static Fragment create() {
@@ -33,7 +39,6 @@ public class MyFarmFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addData();
     }
 
     @Override
@@ -42,18 +47,26 @@ public class MyFarmFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.my_farm_fragment, container, false);
         FishModel = new ArrayList<>();
         FishModel.add(new MyFarmFishModel("김윤재", 1000));
-        mAdapter = new MyFarmFishAdapter(FishModel);
-        mRecyclerView = rootView.findViewById(R.id.fish_recycler);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setAdapter(mAdapter);
+        fishAdapter = new MyFarmFishAdapter(FishModel);
+        fishRecyclerView = rootView.findViewById(R.id.fish_recycler);
+        fishRecyclerView.setHasFixedSize(true);
+        fishRecyclerView.setAdapter(fishAdapter);
         linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        fishRecyclerView.setLayoutManager(linearLayoutManager);
+        fishRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        ItemModel = new ArrayList<>();
+        ItemModel.add(new MyFarmItemModel("김윤재", 4234324));
+        ItemAdapter = new MyFarmItemAdapter(ItemModel);
+        ItemRecyclerView = rootView.findViewById(R.id.item_recycler);
+        ItemRecyclerView.setHasFixedSize(true);
+        ItemRecyclerView.setAdapter(ItemAdapter);
+        linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        ItemRecyclerView.setLayoutManager(linearLayoutManager);
+        ItemRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+
 
         return rootView;
-    }
-
-    public void addData(){
-
     }
 }

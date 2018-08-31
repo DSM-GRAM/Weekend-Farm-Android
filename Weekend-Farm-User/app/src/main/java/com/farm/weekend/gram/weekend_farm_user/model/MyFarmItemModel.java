@@ -4,6 +4,12 @@ public class MyFarmItemModel {
     public String cItemName;
     public int cItemNum;
 
+    public MyFarmItemModel(String cItemName, int cItemNum) {
+        this.cItemName = cItemName;
+        this.cItemNum = cItemNum;
+    }
+
+
     public String getcItemName(){
         return cItemName;
     }
