@@ -9,4 +9,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Edit" parent="Widget.AppCompat.EditText">
+        <item name="android:colorControlNormal">@color/colorPrimary</item>
+    </style>
+
 </resources>
