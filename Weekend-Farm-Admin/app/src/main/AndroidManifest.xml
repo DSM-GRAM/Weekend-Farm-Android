@@ -15,16 +15,18 @@
         <activity android:name=".SignIn.SignInActivity" />
         <activity android:name=".SignUp.SignUpActivity" />
         <activity android:name=".AddMyInform.AddMyInformActivity" />
-        <activity android:name=".MyPageActivity" />
-        <activity android:name=".MyRoomInform.MyRoomInformActivity">
-
-        </activity>
-        <activity android:name=".AppliedRoomInform.AppliedRoomInformActivity">
+        <activity android:name=".MyPage.MyPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MyRoomInform.MyRoomInformActivity">
+
+        </activity>
+        <activity android:name=".AppliedRoomInform.AppliedRoomInformActivity">
+
         </activity>
     </application>
 

@@ -4,7 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.farm.weekend.gram.weekend_farm_admin.MyPageActivity
+import com.farm.weekend.gram.weekend_farm_admin.MyPage.MyPageActivity
 import com.farm.weekend.gram.weekend_farm_admin.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_main_my_page.setOnClickListener{
-            intent = Intent(this,MyPageActivity::class.java)
+            intent = Intent(this, MyPageActivity::class.java)
             startActivity(intent)
         }
 
