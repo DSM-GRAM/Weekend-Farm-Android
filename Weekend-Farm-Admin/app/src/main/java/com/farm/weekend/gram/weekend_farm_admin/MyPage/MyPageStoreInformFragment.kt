@@ -5,10 +5,13 @@ import android.support.constraint.ConstraintLayout
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.farm.weekend.gram.weekend_farm_admin.R
+import kotlinx.android.synthetic.main.fragment_my_page_store.*
+import kotlinx.android.synthetic.main.fragment_my_page_store.view.*
 
 class MyPageStoreInformFragment : Fragment {
     constructor()
@@ -25,11 +28,16 @@ class MyPageStoreInformFragment : Fragment {
 
         recycler.setHasFixedSize(true)
         recycler.layoutManager = lm
-        storeItems.add(StoreItem("sda","34원"))
         val mAdapter = MyPageStoreItemsAdapter(storeItems)
         recycler.adapter = mAdapter
 
-        return layout
+        layout.btn_my_page_add_store_item.setOnClickListener {
+            storeItems.add(StoreItem(edit_my_page_store_item_name.text.toString(),edit_my_page_store_item_cost.text.toString()))
+            mAdapter.notifyDataSetChanged();
+            edit_my_page_store_item_name.text == Editable.Factory.getInstance().newEditable("")
+            edit_my_page_store_item_cost.text == Editable.Factory.getInstance().newEditable("")
 
+        }
+        return layout
     }
 }
