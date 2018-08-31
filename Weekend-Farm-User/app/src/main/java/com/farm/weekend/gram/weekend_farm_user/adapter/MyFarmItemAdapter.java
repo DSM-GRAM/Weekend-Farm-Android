@@ -5,17 +5,20 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
-import com.farm.weekend.gram.weekend_farm_user.model.Model;
+import com.farm.weekend.gram.weekend_farm_user.model.MyFarmFishModel;
+import com.farm.weekend.gram.weekend_farm_user.model.MyFarmItemModel;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+public class MyFarmItemAdapter extends RecyclerView.Adapter<MyFarmItemAdapter.ViewHolder>{
 
-    private final List<Model> items;
+    private final List<MyFarmItemModel> items;
 
-    public RecyclerViewAdapter(List<Model> items) {
+    public MyFarmItemAdapter(List<MyFarmItemModel> items) {
         this.items = items;
     }
 
@@ -23,13 +26,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.item, parent ,false);
+                inflate(R.layout.my_farm_item_item, parent ,false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        MyFarmItemModel item = items.get(position);
+        holder.item_text.setText(item.cItemName + " " + item.cItemNum + "개");
     }
 
     @Override
@@ -38,8 +42,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        ViewHolder(View viewItems) {
+        TextView item_text;
+
+                ViewHolder(View viewItems) {
             super(viewItems);
+            item_text = (TextView) viewItems.findViewById(R.id.item_text);
         }
     }
 }
