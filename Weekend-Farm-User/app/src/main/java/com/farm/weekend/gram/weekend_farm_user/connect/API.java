@@ -21,4 +21,8 @@ public interface API {
     @Headers({"Content-Type: application/json;charset=UTF-8"})
     @GET("/user/search")
     Call<JsonArray> getSearchResult(@Header("Authorization") String Authorization, @Query("donum") int donum);
+
+    @Headers({"Content-Type: application/json;charset=UTF-8"})
+    @GET("/user/store/apply")
+    Call<JsonArray> getStoreApply(@Header("Authorization") String Authorization);
 }

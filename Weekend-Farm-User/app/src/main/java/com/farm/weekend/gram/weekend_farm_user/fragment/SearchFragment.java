@@ -28,6 +28,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import static com.farm.weekend.gram.weekend_farm_user.util.UtilClass.TOKEN;
+
 public class SearchFragment extends Fragment {
 
     String[] doData = new String[]{
@@ -59,7 +61,6 @@ public class SearchFragment extends Fragment {
 
     ArrayList<SearchItemModel> searchItemModels;
 
-    String token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1MWI3NTQ4OC1jZTg0LTRiNzEtYjgzYi0zNzgwMDVkODg0NDQiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFiYyIsImlhdCI6MTUzNTczNzI5MiwibmJmIjoxNTM1NzM3MjkyLCJleHAiOjE1MzgzMjkyOTJ9.7bG0O8YLxYTMdt8WyTR76LV_4d7wB8kFvt4hHpBKrFc";
     public static SearchFragment create() {
         SearchFragment fragment = new SearchFragment();
         return fragment;
@@ -93,7 +94,7 @@ public class SearchFragment extends Fragment {
         Searching.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Connector.api.getSearchResult(token, numberPicker.getValue()).enqueue(new Res<JsonArray>(getActivity().getApplicationContext()) {
+                Connector.api.getSearchResult(TOKEN, numberPicker.getValue()).enqueue(new Res<JsonArray>(getActivity().getApplicationContext()) {
                     @Override
                     public void callback(int code, JsonArray body) {
                         Log.e("TEST", String.valueOf(code));
