@@ -42,12 +42,12 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Vi
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         SearchItemModel item = items.get(position);
         holder.item_text.setText(item.farmName);
-        holder.item_money.setText(item.farmMoney);
+        holder.item_money.setText("" + item.farmMoney);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, FarmInfoActivity.class);
-                context.startActivity(intent);
+                context.getApplicationContext().startActivity(intent);
             }
         });
     }
@@ -63,11 +63,11 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Vi
         CardView cardView;
 
         @SuppressLint("CutPasteId")
-        ViewHolder(final View viewItems) {
+        ViewHolder(View viewItems) {
             super(viewItems);
             item_money = (TextView) viewItems.findViewById(R.id.search_price);
             item_text = (TextView) viewItems.findViewById(R.id.search_name);
-            cardView = viewItems.findViewById(R.id.item_cardview);
+            cardView = viewItems.findViewById(R.id.search_cardview);
         }
     }
 }

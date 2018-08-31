@@ -9,7 +9,7 @@
         tools:style="@style/CardView"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/item_cardview"
+        android:id="@+id/search_cardview"
         android:layout_marginBottom="17dp"
         app:cardCornerRadius="9dp">
         <android.support.constraint.ConstraintLayout

@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -31,6 +32,7 @@
         android:background="@drawable/round"
         android:textColor="#FFFFFF"
         android:text="검색"
+        android:id="@+id/searching"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

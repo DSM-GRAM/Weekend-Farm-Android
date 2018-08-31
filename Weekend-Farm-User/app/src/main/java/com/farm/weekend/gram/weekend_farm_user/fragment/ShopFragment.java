@@ -41,7 +41,7 @@ public class ShopFragment extends Fragment {
         shopItemAdapter = new ShopItemAdapter(shopItemModels, getContext());
         linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(shopItemAdapter);
-        recyclerView.setHasFixedSize(false);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
