@@ -19,11 +19,10 @@ import java.util.ArrayList;
 
 public class ShopFragment extends Fragment {
 
+    ArrayList<ShopItemModel> shopItemModels = new ArrayList<>();
     ShopItemAdapter shopItemAdapter;
-    RecyclerView shopItemView;
-    LinearLayoutManager shoplinearLayoutManager;
-
-    ArrayList<ShopItemModel> shopItemModels;
+    RecyclerView recyclerView;
+    LinearLayoutManager linearLayoutManager;
 
     public static Fragment create() {
         ShopFragment fragment = new ShopFragment();
@@ -33,22 +32,22 @@ public class ShopFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.shop_fragment, container, false);
+        recyclerView = rootView.findViewById(R.id.shop_recycler);
 
-        shopItemModels = new ArrayList<>();
-        shopItemModels.add(new ShopItemModel("김윤재", 1312321, 13231));
-        shopItemAdapter = new ShopItemAdapter(shopItemModels);
-        shopItemView = rootView.findViewById(R.id.shop_recycler);
-        shopItemView.setHasFixedSize(true);
-        shopItemView.setAdapter(shopItemAdapter);
-        shoplinearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        shopItemView.setLayoutManager(shoplinearLayoutManager);
-        shopItemView.setItemAnimator(new DefaultItemAnimator());
+        shopItemModels.add(new ShopItemModel("김윤재", 100, 100000));
+        shopItemAdapter = new ShopItemAdapter(shopItemModels, getContext());
+        linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setAdapter(shopItemAdapter);
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         return rootView;
     }
