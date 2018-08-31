@@ -31,13 +31,22 @@
         android:layout_marginTop="10dp">
         <RadioButton
             android:id="@+id/radiobtn_my_farm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="내 양식장"/>
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="내 양식장"
+            android:background="@drawable/radiobtn_my_page_farm"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:textColor="@drawable/textcolor_my_page"/>
         <RadioButton
             android:id="@+id/radiobtn_my_store"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/radiobtn_my_page_store"
+            android:button="@android:color/transparent"
+            android:textColor="@drawable/textcolor_my_page"
             android:text="내 상점"/>
     </RadioGroup>
 
