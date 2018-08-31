@@ -10,21 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/item_cardview"
-        android:layout_marginBottom="17dp">
+        android:layout_marginBottom="17dp"
+        app:cardCornerRadius="9dp">
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
 
             <TextView
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginStart="24dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/dollar_image"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/item_name"
-                android:text="밥 1개" />
+                android:id="@+id/search_name"
+                android:text="승용이네 양식장" />
 
             <ImageView
                 app:layout_constraintTop_toBottomOf="@id/item_name"
@@ -44,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10,000원"
-                android:id="@+id/item_price"/>
+                android:id="@+id/search_price"/>
             <Button
                 android:layout_width="53dp"
                 android:layout_height="28dp"
@@ -52,7 +54,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginEnd="24dp"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:background="@drawable/round"
                 android:textColor="#FFFFFF"
                 android:text="신청"/>
