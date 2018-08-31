@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
 import com.farm.weekend.gram.weekend_farm_user.adapter.PagerAdapter;
+import com.farm.weekend.gram.weekend_farm_user.connect.Connector;
 import com.farm.weekend.gram.weekend_farm_user.view.DonNotSwipeViewPager;
 
 
@@ -52,6 +53,6 @@ public class MainActivity extends AppCompatActivity{
                 return false;
             }
         });
-//        Connector.api.getUserRepositories()
+
     }
 }

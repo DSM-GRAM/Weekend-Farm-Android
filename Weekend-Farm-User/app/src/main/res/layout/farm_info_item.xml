@@ -33,7 +33,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:id="@+id/date_text"
+                    android:id="@+id/room_text"
                     android:layout_marginStart="17dp"
                     app:layout_constraintStart_toEndOf="@+id/room_image"
                     app:layout_constraintEnd_toEndOf="parent"

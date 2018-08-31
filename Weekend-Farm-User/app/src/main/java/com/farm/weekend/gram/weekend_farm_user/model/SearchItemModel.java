@@ -4,6 +4,12 @@ public class SearchItemModel {
     public String farmName;
     public int farmMoney;
 
+    public SearchItemModel(String farmName, int farmMoney) {
+        this.farmName = farmName;
+        this.farmMoney = farmMoney;
+    }
+
+
     public String getfarmName(){
         return farmName;
     }

@@ -4,6 +4,11 @@ public class MyFarmFishModel {
     public String fishName;
     public int fishNum;
 
+    public MyFarmFishModel(String fishName, int fishNum) {
+        this.fishName = fishName;
+        this.fishNum = fishNum;
+    }
+
     public String getfishName(){
         return fishName;
     }
