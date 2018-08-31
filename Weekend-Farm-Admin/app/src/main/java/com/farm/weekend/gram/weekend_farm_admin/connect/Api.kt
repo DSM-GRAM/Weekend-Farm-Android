@@ -15,4 +15,5 @@ interface Api {
     @POST("signup")
     @Headers("Content-Type: application/json")
     fun doSignUp(@Body signUpModel: SignUpModel): Call<Void>
+
 }

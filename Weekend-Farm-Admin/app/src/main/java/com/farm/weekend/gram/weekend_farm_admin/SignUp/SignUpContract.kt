@@ -3,7 +3,7 @@ package com.farm.weekend.gram.weekend_farm_admin.SignUp
 interface SignUpContract {
     interface View {
         fun pwCheck(): Boolean
-        fun startSignInActivity(): Unit
+        fun startAddMyInformActivity(): Unit
         fun showErrorMessage(message: String): Unit
 
 

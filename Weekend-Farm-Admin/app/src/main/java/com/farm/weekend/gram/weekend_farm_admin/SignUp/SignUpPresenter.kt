@@ -21,7 +21,7 @@ class SignUpPresenter : SignUpContract.Presenter{
 
         Connector.api.doSignUp(signUpModel).enqueue(object: Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                if(response.code() == 201) signUpView.startSignInActivity()
+                if(response.code() == 201) signUpView.startAddMyInformActivity()
                 else if(response.code() == 409) signUpView.showErrorMessage("아이디 중복")
                 else signUpView.showErrorMessage("오류")
             }

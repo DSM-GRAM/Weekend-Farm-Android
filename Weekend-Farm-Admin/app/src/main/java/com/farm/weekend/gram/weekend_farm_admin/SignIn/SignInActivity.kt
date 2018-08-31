@@ -3,7 +3,7 @@ package com.farm.weekend.gram.weekend_farm_admin.SignIn
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.farm.weekend.gram.weekend_farm_admin.MainActivity
+import com.farm.weekend.gram.weekend_farm_admin.Main.MainActivity
 import com.farm.weekend.gram.weekend_farm_admin.R
 import com.farm.weekend.gram.weekend_farm_admin.SignUp.SignUpActivity
 import com.farm.weekend.gram.weekend_farm_admin.util.UtilClass.showToast

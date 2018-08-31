@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.farm.weekend.gram.weekend_farm_admin.AddMyInform.AddMyInformActivity
 import com.farm.weekend.gram.weekend_farm_admin.R
 import com.farm.weekend.gram.weekend_farm_admin.SignIn.SignInActivity
 import com.farm.weekend.gram.weekend_farm_admin.util.UtilClass.showToast
@@ -33,7 +34,6 @@ class SignUpActivity : AppCompatActivity(),SignUpContract.View {
         }
 
 
-
     }
 
     override fun pwCheck(): Boolean {
@@ -41,9 +41,9 @@ class SignUpActivity : AppCompatActivity(),SignUpContract.View {
         else return false
     }
 
-    override fun startSignInActivity() {
+    override fun startAddMyInformActivity() {
         showToast(applicationContext,"회원가입 성공")
-        intent = Intent(applicationContext,SignInActivity::class.java)
+        intent = Intent(applicationContext, AddMyInformActivity::class.java)
         startActivity(intent)
     }
 
