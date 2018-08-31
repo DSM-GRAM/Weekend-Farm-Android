@@ -5,6 +5,12 @@ public class ShopItemModel {
     public int buyItemNum;
     public int buyItemMoney;
 
+    public ShopItemModel(String buyItemName, int buyItemNum, int buyItemMoney) {
+        this.buyItemName = buyItemName;
+        this.buyItemNum = buyItemNum;
+        this.buyItemMoney = buyItemMoney;
+    }
+
     public String getBuyItemName(){
         return buyItemName;
     }
