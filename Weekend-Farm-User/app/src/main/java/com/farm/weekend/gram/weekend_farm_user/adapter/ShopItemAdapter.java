@@ -3,22 +3,18 @@ package com.farm.weekend.gram.weekend_farm_user.adapter;
 import android.annotation.SuppressLint;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
 import com.farm.weekend.gram.weekend_farm_user.fragment.BuyDialogFragment;
-import com.farm.weekend.gram.weekend_farm_user.model.MyFarmItemModel;
 import com.farm.weekend.gram.weekend_farm_user.model.ShopItemModel;
 
 import java.util.List;

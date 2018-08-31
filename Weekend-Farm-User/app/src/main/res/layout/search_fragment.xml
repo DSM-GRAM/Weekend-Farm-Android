@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <NumberPicker
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginStart="49dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
         android:orientation="horizontal"
         android:weightSum="1"
         app:layout_constraintBottom_toTopOf="parent"
@@ -18,51 +18,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.789">
+        app:layout_constraintVertical_bias="0.76">
 
-        <NumberPicker
-            android:id="@+id/do_picker"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.1"
-            android:gravity="center_horizontal"
-            android:text="도"
-            android:textSize="12sp" />
-
-        <NumberPicker
-            android:id="@+id/si_picker"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.1"
-            android:gravity="center_horizontal"
-            android:text="시"
-            android:textSize="12sp" />
-
-        <Button
-            android:id="@+id/search_btn"
-            android:layout_width="0dp"
-            android:layout_height="28dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="20dp"
-            android:layout_weight="0.24"
-            android:background="@drawable/round"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="검색"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+    </NumberPicker>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
