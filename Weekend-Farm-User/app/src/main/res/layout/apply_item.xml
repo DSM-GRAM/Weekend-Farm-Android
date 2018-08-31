@@ -25,7 +25,7 @@
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <ImageView
-                    android:id="@+id/room_image"
+                    android:id="@+id/apply_room_image"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="@drawable/baseline_dashboard_24"
@@ -34,7 +34,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <NumberPicker
-                    android:id="@+id/date_text"
+                    android:id="@+id/apply_room_Picker"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:text="1번 양식장"
@@ -42,7 +42,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.084"
-                    app:layout_constraintStart_toEndOf="@+id/room_image" />
+                    app:layout_constraintStart_toEndOf="@+id/apply_room_image" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/date_text"
+                    app:layout_constraintStart_toEndOf="@+id/apply_room_Picker"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.503" />
             </android.support.constraint.ConstraintLayout>
@@ -81,7 +81,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <NumberPicker
-                    android:id="@+id/money_text"
+                    android:id="@+id/fish_Picker"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
@@ -108,7 +108,7 @@
                 app:layout_constraintVertical_bias="0.188">
 
                 <ImageView
-                    android:id="@+id/fish_image"
+                    android:id="@+id/apply_fish_image"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="@drawable/baseline_stars_24"
@@ -117,7 +117,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <NumberPicker
-                    android:id="@+id/fish_text"
+                    android:id="@+id/apply_fish_Picker"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
@@ -125,7 +125,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.02"
-                    app:layout_constraintStart_toEndOf="@+id/fish_image"
+                    app:layout_constraintStart_toEndOf="@+id/apply_fish_image"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
 
@@ -140,7 +140,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/fish_text"
+                    app:layout_constraintStart_toEndOf="@+id/apply_fish_Picker"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.503" />
             </android.support.constraint.ConstraintLayout>

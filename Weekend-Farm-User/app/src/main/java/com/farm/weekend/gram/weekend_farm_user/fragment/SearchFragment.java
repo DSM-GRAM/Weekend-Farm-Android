@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,17 @@ import android.widget.NumberPicker;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
 import com.farm.weekend.gram.weekend_farm_user.adapter.SearchItemAdapter;
+import com.farm.weekend.gram.weekend_farm_user.connect.Connector;
+import com.farm.weekend.gram.weekend_farm_user.connect.Res;
 import com.farm.weekend.gram.weekend_farm_user.model.SearchItemModel;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -48,6 +59,7 @@ public class SearchFragment extends Fragment {
 
     ArrayList<SearchItemModel> searchItemModels;
 
+    String token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1MWI3NTQ4OC1jZTg0LTRiNzEtYjgzYi0zNzgwMDVkODg0NDQiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFiYyIsImlhdCI6MTUzNTczNzI5MiwibmJmIjoxNTM1NzM3MjkyLCJleHAiOjE1MzgzMjkyOTJ9.7bG0O8YLxYTMdt8WyTR76LV_4d7wB8kFvt4hHpBKrFc";
     public static SearchFragment create() {
         SearchFragment fragment = new SearchFragment();
         return fragment;
@@ -63,21 +75,14 @@ public class SearchFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.search_fragment, container, false);
 
         searchItemModels = new ArrayList<>();
-        searchItemModels.add(new SearchItemModel("진우네 양식장", 30000000));
-        searchItemAdapter = new SearchItemAdapter(searchItemModels, getContext());
-        searchlayoutManager = new LinearLayoutManager(getContext());
-        searchRecyclerView = rootView.findViewById(R.id.recyclerView);
-        searchRecyclerView.setHasFixedSize(true);
-        searchRecyclerView.setAdapter(searchItemAdapter);
-        searchRecyclerView.setLayoutManager(searchlayoutManager);
-        searchRecyclerView.setItemAnimator(new DefaultItemAnimator());
-
+        //searchItemModels.add(new SearchItemModel("진우네 양식장", 30000000));
         Searching = rootView.findViewById(R.id.searching);
         numberPicker = rootView.findViewById(R.id.do_picker);
         numberPicker.setMinValue(0);
         numberPicker.setMaxValue(16);
         numberPicker.setDisplayedValues(doData);
 
+        searchRecyclerView = rootView.findViewById(R.id.recyclerView);
 
         resultView();
 
@@ -88,7 +93,22 @@ public class SearchFragment extends Fragment {
         Searching.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Connector.api.getSearchResult(token, numberPicker.getValue()).enqueue(new Res<JsonArray>(getActivity().getApplicationContext()) {
+                    @Override
+                    public void callback(int code, JsonArray body) {
+                        Log.e("TEST", String.valueOf(code));
+                        if(code == 200){
+                            searchItemModels = new Gson().fromJson(body.toString(), new TypeToken<ArrayList<SearchItemModel>>(){}.getType());
+                            searchItemAdapter = new SearchItemAdapter(searchItemModels, getContext());
+                            searchlayoutManager = new LinearLayoutManager(getContext());
+                            searchRecyclerView.setHasFixedSize(true);
+                            searchRecyclerView.setAdapter(searchItemAdapter);
+                            searchRecyclerView.setLayoutManager(searchlayoutManager);
+                            searchRecyclerView.setItemAnimator(new DefaultItemAnimator());
+                            Log.e("TEST", body.toString());
+                        }
+                    }
+                });
             }
         });
     }

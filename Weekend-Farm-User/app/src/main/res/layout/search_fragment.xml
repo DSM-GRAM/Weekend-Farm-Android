@@ -8,7 +8,7 @@
     <NumberPicker
         android:id="@+id/do_picker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="215dp"
         android:layout_marginBottom="356dp"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
@@ -23,6 +23,7 @@
 
     <Button
 
+        android:id="@+id/searching"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -30,15 +31,14 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="76dp"
         android:background="@drawable/round"
-        android:textColor="#FFFFFF"
         android:text="검색"
-        android:id="@+id/searching"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
