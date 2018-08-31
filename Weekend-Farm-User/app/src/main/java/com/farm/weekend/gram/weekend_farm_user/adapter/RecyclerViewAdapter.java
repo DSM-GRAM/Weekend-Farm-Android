@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
 import com.farm.weekend.gram.weekend_farm_user.model.Model;
@@ -38,8 +40,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        ViewHolder(View viewItems) {
+        ImageView fish_image;
+        TextView fish_data;
+
+                ViewHolder(View viewItems) {
             super(viewItems);
+
+            // fish_image = viewItems.findViewById(R.id.fish)
         }
     }
 }
