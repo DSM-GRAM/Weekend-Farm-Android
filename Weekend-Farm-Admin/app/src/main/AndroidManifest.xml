@@ -11,14 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main.MainActivity">
-
-        </activity>
+        <activity android:name=".Main.MainActivity"></activity>
         <activity android:name=".SignIn.SignInActivity" />
         <activity android:name=".SignUp.SignUpActivity" />
         <activity android:name=".AddMyInform.AddMyInformActivity" />
         <activity android:name=".MyPageActivity" />
         <activity android:name=".MyRoomInform.MyRoomInformActivity">
+
+        </activity>
+        <activity android:name=".AppliedRoomInform.AppliedRoomInformActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
