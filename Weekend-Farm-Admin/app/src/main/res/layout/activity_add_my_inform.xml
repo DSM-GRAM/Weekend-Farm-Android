@@ -103,13 +103,12 @@
                 app:layout_constraintTop_toBottomOf="@id/edit_add_my_inform_farm_address"
                 app:layout_constraintWidth_percent="0.9">
 
-                <TextView
+                <EditText
                     android:id="@+id/text_add_my_inform_additional_inform"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:inputType="text"
-                    android:text="additional inform"
                     android:textColor="@color/colorGrayLight"
                     android:textSize="12sp" />
             </android.support.v7.widget.CardView>
