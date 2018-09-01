@@ -47,18 +47,11 @@ public class ApplyAdapter extends RecyclerView.Adapter<ApplyAdapter.ViewHolder>{
         ImageView ApplyRoomImage;
         ImageView FishImage;
 
-        NumberPicker RoomText;
-        NumberPicker FishKindText;
-        NumberPicker FishNum;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ApplyRoomImage = (ImageView) itemView.findViewById(R.id.apply_room_image);
             FishImage = (ImageView) itemView.findViewById(R.id.apply_fish_image);
-
-            RoomText = (NumberPicker) itemView.findViewById(R.id.apply_room_Picker);
-            FishKindText = (NumberPicker) itemView.findViewById(R.id.fish_Picker);
-            FishNum = (NumberPicker) itemView.findViewById(R.id.apply_fish_Picker);
         }
     }
 }

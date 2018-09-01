@@ -46,7 +46,7 @@ public class MyFarmFragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.my_farm_fragment, container, false);
         FishModel = new ArrayList<>();
-        FishModel.add(new MyFarmFishModel("김윤재", 1000));
+        FishModel.add(new MyFarmFishModel("광어", 300));
         fishAdapter = new MyFarmFishAdapter(FishModel);
         fishRecyclerView = rootView.findViewById(R.id.fish_recycler);
         fishRecyclerView.setHasFixedSize(true);
@@ -56,7 +56,7 @@ public class MyFarmFragment extends Fragment {
         fishRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         ItemModel = new ArrayList<>();
-        ItemModel.add(new MyFarmItemModel("김윤재", 4234324));
+        ItemModel.add(new MyFarmItemModel("사료", 100));
         ItemAdapter = new MyFarmItemAdapter(ItemModel);
         ItemRecyclerView = rootView.findViewById(R.id.item_recycler);
         ItemRecyclerView.setHasFixedSize(true);
@@ -64,8 +64,6 @@ public class MyFarmFragment extends Fragment {
         linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         ItemRecyclerView.setLayoutManager(linearLayoutManager);
         ItemRecyclerView.setItemAnimator(new DefaultItemAnimator());
-
-
 
         return rootView;
     }

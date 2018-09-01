@@ -20,9 +20,12 @@
                 android:id="@+id/room"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="425dp"
+                android:layout_marginBottom="72dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
 
                 <ImageView
                     android:id="@+id/apply_room_image"
@@ -33,11 +36,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <NumberPicker
+                <EditText
                     android:id="@+id/apply_room_Picker"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1번 양식장"
+                    android:hint="       "
+                    android:inputType="number"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -65,26 +69,27 @@
                 android:id="@+id/fish_kind"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/room">
 
                 <ImageView
                     android:id="@+id/fish_kind_image"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:background="@drawable/baseline_stars_24"
+                    android:background="@drawable/icon_fish"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <NumberPicker
+                <EditText
                     android:id="@+id/fish_Picker"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
+                    android:hint="물고기 종류"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -99,28 +104,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/room"
-                app:layout_constraintVertical_bias="0.188">
+                app:layout_constraintTop_toBottomOf="@+id/fish_kind"
+                app:layout_constraintVertical_bias="1.0">
 
                 <ImageView
                     android:id="@+id/apply_fish_image"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:background="@drawable/baseline_stars_24"
+                    android:background="@drawable/icon_fish"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <NumberPicker
+                <EditText
                     android:id="@+id/apply_fish_Picker"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
+                    android:inputType="number"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -143,37 +148,7 @@
                     app:layout_constraintStart_toEndOf="@+id/apply_fish_Picker"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.503" />
-            </android.support.constraint.ConstraintLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="67dp"
-                android:background="@drawable/white"
-                app:layout_constraintBottom_toBottomOf="@+id/fish_kind"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/fish_kind"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="67dp"
-                android:background="@drawable/white"
-                app:layout_constraintBottom_toBottomOf="@+id/fish_kind"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/fish_kind"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/white"
-                app:layout_constraintBottom_toBottomOf="@+id/fish"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+            </android.support.constraint.ConstraintLayout>/>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>

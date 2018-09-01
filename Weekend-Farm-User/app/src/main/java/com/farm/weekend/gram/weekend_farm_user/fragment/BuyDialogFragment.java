@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.farm.weekend.gram.weekend_farm_user.R;
+import com.farm.weekend.gram.weekend_farm_user.util.UtilClass;
 
 public class BuyDialogFragment extends DialogFragment {
     EditText Item_num;
@@ -30,7 +31,8 @@ public class BuyDialogFragment extends DialogFragment {
         Apply_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                UtilClass.Toast(getContext(), "신청 되었습니다.");
+                dismiss();
             }
         });
 

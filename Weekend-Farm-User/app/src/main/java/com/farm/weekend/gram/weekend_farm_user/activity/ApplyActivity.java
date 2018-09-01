@@ -1,6 +1,7 @@
 package com.farm.weekend.gram.weekend_farm_user.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -14,8 +15,11 @@ import android.widget.Button;
 import com.farm.weekend.gram.weekend_farm_user.R;
 import com.farm.weekend.gram.weekend_farm_user.adapter.ApplyAdapter;
 import com.farm.weekend.gram.weekend_farm_user.model.ApplyModel;
+import com.farm.weekend.gram.weekend_farm_user.util.UtilClass;
 
 import java.util.ArrayList;
+
+import okhttp3.internal.Util;
 
 public class ApplyActivity extends AppCompatActivity {
 
@@ -34,7 +38,7 @@ public class ApplyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply);
 
-        apply_btn = findViewById(R.id.add_btn);
+        apply_btn = findViewById(R.id.apply_button);
 
         applyModels = new ArrayList<>();
         applyModels.add(new ApplyModel("윤재 바보", 434, "남탓 윤재"));
@@ -49,9 +53,10 @@ public class ApplyActivity extends AppCompatActivity {
         apply_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                i++;
-                applyModels.add(new ApplyModel("윤재 바보" + i, 342 + i, "남탓 윤재" + i));
-
+                UtilClass.asdf = 1;
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                UtilClass.Toast(getApplicationContext(), "신청 되었습니다");
             }
         });
     }

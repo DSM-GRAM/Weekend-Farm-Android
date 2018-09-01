@@ -35,7 +35,9 @@ public class FarmInfoActivity extends AppCompatActivity {
         GotoApply = findViewById(R.id.gotoApply);
 
         infoModels = new ArrayList<>();
-        infoModels.add(new FarmInfoModel("윤재 바보", 434, "남탓 윤재", 34));
+        infoModels.add(new FarmInfoModel("1번", 100000, "65", 10));
+        infoModels.add(new FarmInfoModel("2번", 200000, "35", 18));
+        infoModels.add(new FarmInfoModel("3번", 150000, "150", 20));
         infoAdapter = new FarmInfoAdapter(infoModels);
         infolinearLayoutManager = new LinearLayoutManager(getApplicationContext());
         inforecyclerView = findViewById(R.id.use_recycler);

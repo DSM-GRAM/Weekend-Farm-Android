@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:text="010-9473-2771"
+                android:text="010-2034-1045"
                 android:drawableStart="@drawable/baseline_phone_24" />
 
             <EditText
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:text="대전광역시 법동 승용이네 아파트"
+                android:text="강원도 평창군 평창읍 상리 239"
                 android:drawableStart="@drawable/baseline_home_24" />
 
             <TextView
@@ -72,7 +72,7 @@
                     android:layout_marginBottom="12dp"
                     android:layout_marginStart="14dp"
                     android:layout_marginEnd="14dp"
-                    android:text="승용이네 양식장 경력 30년"/>
+                    android:text="오후 9시에 영업 종료 합니다"/>
             </android.support.v7.widget.CardView>
 
             <TextView

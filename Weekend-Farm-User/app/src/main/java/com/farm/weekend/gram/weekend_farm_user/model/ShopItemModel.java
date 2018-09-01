@@ -1,39 +1,27 @@
 package com.farm.weekend.gram.weekend_farm_user.model;
 
 public class ShopItemModel {
-    public String buyItemName;
-    public int buyItemNum;
-    public int buyItemMoney;
+    public String cItemName;
+    public int cItemNum;
+    public int money;
 
     ShopItemModel(){}
 
-    public ShopItemModel(String buyItemName, int buyItemNum, int buyItemMoney){
-        this.buyItemName = buyItemName;
-        this.buyItemNum = buyItemNum;
-        this.buyItemMoney = buyItemMoney;
+    public ShopItemModel(String cItemName, int cItemNum, int money){
+        this.cItemName = cItemName;
+        this.cItemNum = cItemNum;
+        this.money = money;
     }
 
     public String getBuyItemName(){
-        return buyItemName;
+        return cItemName;
     }
 
     public int getBuyItemNum(){
-        return buyItemNum;
+        return cItemNum;
     }
 
     public int getBuyItemMoney(){
-        return buyItemMoney;
-    }
-
-    public void setBuyItemName(String buyItemName){
-        this.buyItemName = buyItemName;
-    }
-
-    public void setBuyItemMoney(int buyItemMoney){
-        this.buyItemMoney = buyItemMoney;
-    }
-
-    public void setBuyItemNum(int buyItemNum){
-        this.buyItemNum = buyItemNum;
+        return money;
     }
 }
