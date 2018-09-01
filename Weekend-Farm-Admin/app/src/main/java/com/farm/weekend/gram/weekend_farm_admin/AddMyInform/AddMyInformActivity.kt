@@ -1,10 +1,12 @@
 package com.farm.weekend.gram.weekend_farm_admin.AddMyInform
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import com.farm.weekend.gram.weekend_farm_admin.Main.MainActivity
 import com.farm.weekend.gram.weekend_farm_admin.R
 import kotlinx.android.synthetic.main.activity_add_my_inform.*
 
@@ -24,6 +26,11 @@ class AddMyInformActivity : AppCompatActivity() {
         btn_add_my_inform_add_room.setOnClickListener{
             rooms.add(RoomsItem(edit_add_my_inform_room_name.text.toString(),edit_add_my_inform_room_cost.text.toString(),edit_add_my_inform_room_fish_number.text.toString(), edit_add_my_inform_room_water_temparature.text.toString()))
             mAdapter.notifyDataSetChanged();
+        }
+
+        btn_add_my_inform.setOnClickListener {
+            intent = Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

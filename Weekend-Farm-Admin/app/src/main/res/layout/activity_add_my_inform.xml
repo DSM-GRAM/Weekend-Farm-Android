@@ -70,7 +70,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:drawableStart="@drawable/icon_address"
-                android:hint="양식장 전화번호"
+                android:hint="양식장 주소"
                 android:textColor="@color/colorGrayLight"
                 android:textColorHint="@color/colorGrayLight"
                 android:textSize="14sp"

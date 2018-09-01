@@ -34,7 +34,9 @@ class MyPageFarmInformFragment : Fragment {
 
         recycler.setHasFixedSize(true)
         recycler.layoutManager = lm
-        roomItems.add(MyPageRoomsItem("1","2","3","4"))
+        roomItems.add(MyPageRoomsItem("1번 양식장","160000","35","25"))
+        roomItems.add(MyPageRoomsItem("2번 양식장","150000","32","26"))
+        roomItems.add(MyPageRoomsItem("3번 양식장","200000","50","27"))
         val mAdapter = MyPageRoomItemsAdapter(roomItems)
         recycler.adapter = mAdapter
 
@@ -44,10 +46,10 @@ class MyPageFarmInformFragment : Fragment {
                 roomItems.add(MyPageRoomsItem(edit_my_page_room_name.text.toString(), edit_my_page_room_cost.text.toString(), edit_my_page_room_fish_number.text.toString(), edit_my_page_room_water_temparature.text.toString()))
                 Log.d("Debug","roomsItems: "+roomItems[0].roomName)
                 mAdapter.notifyDataSetChanged()
-                edit_my_page_room_name.text == Editable.Factory.getInstance().newEditable("")
-                edit_my_page_room_cost.text == Editable.Factory.getInstance().newEditable("")
-                edit_my_page_room_fish_number.text == Editable.Factory.getInstance().newEditable("")
-                edit_my_page_room_water_temparature.text == Editable.Factory.getInstance().newEditable("")
+                edit_my_page_room_name.text == Editable.Factory.getInstance().newEditable(null)
+                edit_my_page_room_cost.text == Editable.Factory.getInstance().newEditable(null)
+                edit_my_page_room_fish_number.text == Editable.Factory.getInstance().newEditable(null)
+                edit_my_page_room_water_temparature.text == Editable.Factory.getInstance().newEditable(null)
             }
         }
         return layout
