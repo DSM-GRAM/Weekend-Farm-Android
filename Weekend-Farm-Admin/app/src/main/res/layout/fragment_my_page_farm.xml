@@ -59,7 +59,7 @@
                 android:layout_marginTop="10dp"
                 android:drawableStart="@drawable/icon_address"
                 android:hint="양식장 주소"
-                android:text="전라북도 전주시 덕진구 금암1동 백제대로 567"
+                android:text="전라북도 전주시 덕진구 금암1동"
                 android:inputType="text"
                 android:textColor="@color/colorGrayLight"
                 android:textColorHint="@color/colorGrayLight"
